@@ -1,6 +1,7 @@
+// curentdisplay is variable storing the display string.
 let currentdisplay = ''
 const screen = document.querySelector(".screen")
-
+// selecting the buttons 
 const clear_button = document.querySelector('.clear')
 const plus_button = document.querySelector('.plus')
 const minus_button = document.querySelector('.minus')
@@ -18,7 +19,16 @@ const eight_button = document.querySelector('.eight')
 const nine_button = document.querySelector('.nine')
 const zero_button = document.querySelector('.zero')
 const equal_button = document.querySelector('.equal')
+const backspace_button = document.querySelector('.backspace')
 
+
+// defined a function for backspace
+function backspace(string) {
+    return string = string.slice(0, -1);
+}
+
+// adding functanality for each button
+// this is mouse click event
 clear_button.addEventListener("click", () => {
     currentdisplay = ''
     screen.innerHTML = currentdisplay
@@ -88,7 +98,27 @@ equal_button.addEventListener("click", () => {
     screen.innerHTML = result
 })
 
+backspace_button.addEventListener("click", () => {
+    currentdisplay = backspace(currentdisplay)
+    screen.innerHTML = currentdisplay
+})
 
-
-
-
+// adding the keyboard event
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter"){
+        var result = eval(currentdisplay)
+        screen.innerHTML = result
+    } else if (event.key ===  "Backspace"){
+        currentdisplay = backspace(currentdisplay) //backspace function call
+        screen.innerHTML = currentdisplay
+    }else if(event.key >= "0" && event.key <= "9"){
+        currentdisplay = currentdisplay + event.key
+        screen.innerHTML = currentdisplay
+        console.log("Key pressed: " + event.key);
+    }else if(event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/' || event.key === '.' ){
+        currentdisplay = currentdisplay + event.key
+        screen.innerHTML = currentdisplay
+    } else{
+        alert("Enter numerical value only");
+    }
+});
