@@ -7,5 +7,5 @@ HTML, CSS, JAVASCRIPT, BOOTSTRAP
 ## Visit this calculator
 https://sonalrajsr.github.io/calculator/
 ## Images
-![image](https://github.com/sonalrajsr/calculator/assets/123736054/98c20adc-54ac-4743-bc24-bd6d4d1e8606)
+![image](https://github.com/sonalrajsr/calculator/assets/123736054/5e108526-758f-4497-9ff0-e09a6aa0fc4b)
 
