@@ -1,0 +1,26 @@
+.Calculator{
+    border: 5px solid black;
+    width: 300px;
+    background-color: antiquewhite;
+}
+.screen{
+    border: 2px solid black;
+    width: 90%;
+    height: 50px;
+    margin: 5%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.btn{
+    height: 70px;
+    width: 70px;
+}
+.last-button{
+    margin-bottom: 10px;
+}
