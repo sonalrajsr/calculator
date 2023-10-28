@@ -94,7 +94,7 @@ zero_button.addEventListener("click", () => {
     screen.innerHTML = currentdisplay
 })
 equal_button.addEventListener("click", () => {
-    var result = eval(currentdisplay)
+    let result = eval(currentdisplay)
     screen.innerHTML = result
 })
 
@@ -106,7 +106,8 @@ backspace_button.addEventListener("click", () => {
 // adding the keyboard event
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter"){
-        var result = eval(currentdisplay)
+        event.preventDefault(); 
+        let result = eval(currentdisplay)
         screen.innerHTML = result
     } else if (event.key ===  "Backspace"){
         currentdisplay = backspace(currentdisplay) //backspace function call
@@ -114,7 +115,7 @@ document.addEventListener("keydown", function(event) {
     }else if(event.key >= "0" && event.key <= "9"){
         currentdisplay = currentdisplay + event.key
         screen.innerHTML = currentdisplay
-        console.log("Key pressed: " + event.key);
+        // console.log("Key pressed: " + event.key);
     }else if(event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/' || event.key === '.' ){
         currentdisplay = currentdisplay + event.key
         screen.innerHTML = currentdisplay
