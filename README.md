@@ -1,8 +1,8 @@
-## Discription
+## Description
 This calculator is made using HTML, CSS, and JAVASCRIPT
 You can use both the mouse and keyboard for entering calculations.
 ## Tech Stacks
-HTML, CSS, JS, BOOTSTRAP
+HTML, CSS, JAVASCRIPT, BOOTSTRAP
 ## Visit this calculator
 https://sonalrajsr.github.io/calculator/
 ## Images
