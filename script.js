@@ -106,7 +106,7 @@ backspace_button.addEventListener("click", () => {
 // adding the keyboard event
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter"){
-        event.preventDefault(); 
+        event.preventDefault(); // prtoects the default behaviour of submitting form of enter button
         let result = eval(currentdisplay)
         screen.innerHTML = result
     } else if (event.key ===  "Backspace"){
